@@ -1,6 +1,4 @@
 #include "TrafficLight.h"
-#include <ESP8266WiFi.h>
-#define byte uint8_t
 
 void TrafficLight::init() {
    for(int i=0; i<3; i++) {     
@@ -60,4 +58,11 @@ void TrafficLight::Stop() {
    this->TurnOff(YELLOW);
    this->TurnOff(GREEN);
    this->TurnOn(RED);
+ }
+
+ void TrafficLight::Down()
+ {
+   this->TurnOff(YELLOW);
+   this->TurnOff(GREEN);
+   this->TurnOff(RED);
  }
