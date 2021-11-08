@@ -42,13 +42,14 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   server.begin();
+  tl.AllUp();
 }
 
 void tlrun() {
   tl.Stop();
   delay(5000); //5 seconds
   tl.Go();
-  delay(5000); //7 seconds
+  delay(7000); //7 seconds
   tl.Careful();
   delay(2000); //2 seconds
 }
@@ -135,7 +136,6 @@ void loop() {
     Serial.println("Client disconnected.");
     Serial.println("");
   }
-  Serial.println("TL Finish a loop");
   if (tlState == "on"){
     tlrun();
   }else{

@@ -66,3 +66,9 @@ void TrafficLight::Stop() {
    this->TurnOff(GREEN);
    this->TurnOff(RED);
  }
+
+ void TrafficLight::AllUp(){
+   this->TurnOn(YELLOW);
+   this->TurnOn(GREEN);
+   this->TurnOn(RED);
+ }

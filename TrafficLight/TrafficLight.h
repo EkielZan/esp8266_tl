@@ -15,6 +15,7 @@ class TrafficLight {
     void Careful();
     void Stop();
     void Down();
+    void AllUp();
     bool GetState(int color);
     bool* GetStates();
   private:
@@ -23,4 +24,3 @@ class TrafficLight {
     void init();
 };
 #endif
-
